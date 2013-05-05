@@ -21,33 +21,61 @@ The framework also solves Travelling SalesMan problems as a subset of CVRP probl
 shows how to solve the OneMax problem
 
 Pseudo Code for CVRP
+
 generate random new generation* of predefined population size
+
 initialize last generation from random new generation
+
 till termination condition reached
+
   store and cache last generation fitness and costs
+  
   increase iteration count
+  
   if reset condition reached
+    
     generate new random generation* of half population size
+    
     retrieve best of elite chromosomes** of half population size
+    
     reinitialize last generation as a shuffle of the two above
+  
   end
+  
   check valid solutions and store elite chromosomes from last population****
+  
   dispose current generation
+  
   if reset condition was reached in this run
+    
     choose mating population as last generation
+  
   else
+    
     choose mating population from last generation based on fitness
+  
   end
+  
   apply crossover to mating population to get current generation***
+  
   apply mutation on current generation
+  
   dispose last generation
+  
   get current generation into last generation*****
+
 optimize final elite chromosomes
+
 *(chromosomes with random sequence of all nodes with depos inserted at equal sequential lengths)
+
 **(conditionally optimize elite chromosomes before reintroduction)
+
 ***(conditionally generate 4 children from each two parents)
+
 **** to a max of population size in a FIFO queue
+
 ***** choose best set if size is more than population size
+
 
 
 More Information on this topic:
