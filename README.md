@@ -1,13 +1,20 @@
 CVRP
 ====
 
-Solving capacitated vehicle routing problem with Genetic Algorithm
+Solving capacitated vehicle routing problem with Genetic Algorithm.
+
 This Java code base solves a Capacitated Vehicle Routing problem using Genetic Algorithm
+
 For selectors it uses RouletteWheel and Stochastic Universal Sampling (http://ifigenia.org/w/images/2/2c/IWGN-2009-01-07.pdf)
+
 For Cross Over it uses Sequential Constructive Crossover (http://www.cscjournals.org/csc/manuscript/Journals/IJBB/volume3/Issue6/IJBB-41.pdf)
+
 SCC was found to be far more effective compared to Neighbourhood Search, SubRoute Insertion, Insertion and Saving heuristics,PMX cross over, K Means Clustering, Intra Route Exchange relocate etc.
+
 It uses a custom - flip mutation(flips the whole solution), and the framework supports Shuffle SubTours and Shuffle Tour mutations.
+
 It also uses Elitism and a Circle Sweep Optimization
+
 The framework should work with any Genetic Algorithm with some minor changes.
 
 The framework also solves Travelling SalesMan problems as a subset of CVRP problem and
