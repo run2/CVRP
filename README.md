@@ -10,6 +10,9 @@ It uses a custom - flip mutation(flips the whole solution), and the framework su
 It also uses Elitism and a Circle Sweep Optimization
 The framework should work with any Genetic Algorithm with some minor changes.
 
+The framework also solves Travelling SalesMan problems as a subset of CVRP problem and
+shows how to solve the OneMax problem
+
 Pseudo Code for CVRP
 generate random new generation* of predefined population size
 initialize last generation from random new generation
