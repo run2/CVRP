@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="OneMaxTSPCVRP">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="OneMaxTSPCVRP.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="ga/core/genes/EdgeGeneMultipleTours.java"/>
+                <exclude name="ga/tsp/TSPChromosomeWithNodeGeneRotating.java"/>
+                <exclude name="ga/tsp/NodesInCircleRotating.java"/>
+                <exclude name="poi/cvrp/PlotIt.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <exclude name="ga/core/genes/EdgeGeneMultipleTours.java"/>
+            <exclude name="ga/tsp/TSPChromosomeWithNodeGeneRotating.java"/>
+            <exclude name="ga/tsp/NodesInCircleRotating.java"/>
+            <exclude name="poi/cvrp/PlotIt.java"/>
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Circle">
+        <java classname="ga.core.util.Circle" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="FruityBunCVRP">
+        <java classname="ga.cvrp.FruityBunCVRP" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="FruityBunNodesWithDemand">
+        <java classname="ga.input.FruityBunNodesWithDemand" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="FruityBunTSP">
+        <java classname="ga.cvrp.FruityBunTSP" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="OneMaxSimpleGA">
+        <java classname="ga.practice.onemax.OneMaxSimpleGA" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="Permutations">
+        <java classname="ga.core.util.Permutations" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="PlotIt">
+        <java classname="poi.cvrp.PlotIt" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="TestCentroidSeparation">
+        <java classname="ga.core.testtsp.TestCentroidSeparation" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+    <target name="TSPWithEdgeGene">
+        <java classname="ga.practice.tsp.TSPWithEdgeGene" failonerror="true" fork="yes">
+            <classpath refid="OneMaxTSPCVRP.classpath"/>
+        </java>
+    </target>
+</project>
