@@ -2,7 +2,6 @@
 
 package ga.cvrp;
 
-import ga.core.Chromosome;
 import ga.core.CommonGA;
 import ga.core.GeneGenerator;
 import ga.core.Node;
@@ -40,7 +39,7 @@ public class FruityBunTSP extends CommonGA{
 		//logger.info(population.toString());
 	}
 	
-	@SuppressWarnings({ "rawtypes", "unchecked"})
+	@SuppressWarnings({ "unchecked"})
 	public void doGA(){
 		
 		RunGA<CVRPChromosomeWithNodeGene> ga = new RunGA<CVRPChromosomeWithNodeGene>(population,runningPopulationSize,runningPopulationSize,50,1,1,pathGeneGenerator);

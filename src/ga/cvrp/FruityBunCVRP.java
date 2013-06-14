@@ -120,10 +120,14 @@ public class FruityBunCVRP extends CommonGA{
 		Operator<CVRPChromosomeWithNodeGene> mutationInstance = (Operator<CVRPChromosomeWithNodeGene>) mutationClassConstructor.newInstance(probabilityToMutate);
 		ga.addReproductionOperators(mutationInstance);
 		
+		long startTime = System.nanoTime();
 		ga.run();
+		long endTime = System.nanoTime();
+		long duration = endTime - startTime;		
 
 		logger.info("Best solution at iteration " + RunGA.bestChromosomeAtIteration );
 		logger.info("Best solutions " + RunGA.bestChromosomes.toString());
+		logger.info("Duration in seconds " + duration);
 		
 		int bestSize = RunGA.bestChromosomes.size();
 		for(int i = 0 ; i < bestSize - 1 ; i ++){
@@ -139,8 +143,9 @@ public class FruityBunCVRP extends CommonGA{
 			//System.out.println(((Node)c.getGeneAt(j)).getxCoordinate() + "\t" + ((Node)c.getGeneAt(j)).getyCoordinate());
 		//}
 		
-		System.out.println("login db12196");
+		//System.out.println("login ******");
 		System.out.println("cost " + bestCost);
+		System.out.println("duration " + duration);
 		if(c instanceof CVRPChromosomeWithNodeGene)
 			System.out.println(((CVRPChromosomeWithNodeGene)c).printSubTours());
 		

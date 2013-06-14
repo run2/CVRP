@@ -20,7 +20,7 @@ import poi.cvrp.PlotIt;
 /**
  * @author Debanjan Bhattacharyya <b.debanjan@gmail.com>
  * This is the class which runs the GA
- * It is generic so that the same class can be used
+ * It is generic, so the same class can be used
  * for different types of chromosomes and genes
  * Copyright 2013 Academic Free License 3.0
  */

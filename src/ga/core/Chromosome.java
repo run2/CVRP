@@ -4,13 +4,13 @@ import java.util.Arrays;
 /**
  * @author Debanjan Bhattacharyya <b.debanjan@gmail.com>
  * This is the chromosome class with generic genes
- * Any two chromosome which have the same sequence of
- * genes are considered to be the same (this hels in
- * caching their fitness values ) - however additionally
- * there is a purpose part which separates a chromosome
- * which is running being used in the algorithm from that
+ * Any two chromosomes which have the same sequence of
+ * genes are considered to be the same (this helps in
+ * caching their fitness values ) - however additionally,
+ * there is a purpose field which separates a chromosome
+ * which is being used in the algorithm, from that
  * which is being stored separately for further analysis
- * or refeefing later into the population. This is needed
+ * or re-feeding into the population. This is needed
  * because once a chromosome is stored, it should not be
  * subject to any mutation.
  * Copyright 2013 Academic Free License 3.0

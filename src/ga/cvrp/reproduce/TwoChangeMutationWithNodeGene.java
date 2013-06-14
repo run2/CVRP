@@ -13,7 +13,7 @@ import java.util.Random;
  * Only works if the chromosome at least has 9 nodes
  * D A B C X E D
  * Can mutate if A E are chosen to be flipped with a minimum of 3 nodes between them
- * To keep number of edges changed to 2 ( rather than 4) the vertices of the portion in between is also flipped
+ * To keep number of edges changed to 2 (rather than 4) the vertices of the portion in between is also flipped
  * After mutation D E X C B A D
  * Longer chromosomes are OK - shorter - NO
  * http://www.iba.t.u-tokyo.ac.jp/~jaku/pdf/rindoku101109_slide.pdf

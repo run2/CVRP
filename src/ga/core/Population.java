@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author Debanjan Bhattacharyya <b.debanjan@gmail.com>
- * This is the population class of generic chromosomes
+ * This is the population class for generic chromosomes
  * Copyright 2013 Academic Free License 3.0
  */
 public class Population<T> implements Serializable  {

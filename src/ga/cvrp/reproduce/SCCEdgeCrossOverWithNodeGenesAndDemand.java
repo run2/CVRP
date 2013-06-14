@@ -20,12 +20,11 @@ import java.util.Set;
  * Sequential constructive crossover operator (SCX)
  * http://www.cscjournals.org/csc/manuscript/Journals/IJBB/volume3/Issue6/IJBB-41.pdf
  * Follows the following algorithm
- * 1. Chooses two parents (i and i+1 ) from set of couples and based on probability checks if they will mate
- *    If the do not mate then they are carried over the the child population
+ * 1. Chooses two parents (i and i+1 ) from set of couples, checks if they will mate based on probability.
+ *    If the do not mate then they are carried over into the child population
  *    Once a parent is carried over to the child population it is not allowed to be carried
- *    over any more and hence can override the probabilistic choice of being carried over
- *    again if it appears multiple times in the selected couples
- * 2. Once chosen to mate two children are created SCX cross over
+ *    over any more.
+ * 2. Once chosen to mate, two children are created using SCX cross over
  * Copyright 2013 Academic Free License 3.0
  */
 public class SCCEdgeCrossOverWithNodeGenesAndDemand implements Operator<CVRPChromosomeWithNodeGene>{
